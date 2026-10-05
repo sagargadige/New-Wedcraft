@@ -142,7 +142,7 @@
 .main-img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Error Fixed: Image ab crop nahi hogi */
+    object-fit: contain; 
     object-position: center bottom; 
 }
 
@@ -186,16 +186,34 @@
     margin: 0;
 }
 
-/* Responsive fixes */
+/* Responsive fixes for small screens */
 @media (max-width: 991px) {
-    .hero-title { font-size: 2.8rem; }
-    .italic-gold { font-size: 2.6rem; }
-    .hero-image-wrapper { margin-top: 40px; }
-    .arch-composition { width: 90%; max-width: 300px; }
+    .site-header {
+        position: relative !important;
+        background-color: var(--bg-light);
+    }
     .hero-section {
-        height: auto;
-        min-height: auto;
-        padding-top: 40px !important;
-        padding-bottom: 60px;
+        height: auto !important;
+        min-height: auto !important;
+        padding-top: 30px !important;
+        padding-bottom: 60px !important;
+    }
+    .hero-title { 
+        font-size: 2.3rem !important; 
+        line-height: 1.2 !important;
+    }
+    .italic-gold { 
+        font-size: 2.1rem !important; 
+    }
+    .hero-description {
+        font-size: 0.95rem !important;
+        max-width: 100% !important;
+    }
+    .hero-image-wrapper { 
+        margin-top: 40px; 
+    }
+    .arch-composition { 
+        width: 85%; 
+        max-width: 280px; 
     }
 }
