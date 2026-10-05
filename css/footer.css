@@ -1,0 +1,107 @@
+/* -- Professional Light Theme Footer -- */
+.site-footer {
+    background-color: var(--bg-light); /* Website ka standard light alabaster background */
+    color: var(--text-dark);
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer-brand {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.footer-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: 320px;
+    line-height: 1.6;
+}
+
+.footer-nav-links li a {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-nav-links li a:hover {
+    color: var(--accent-gold);
+}
+
+.social-icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.social-icon-box svg {
+    width: 18px;
+    height: 18px;
+}
+
+.social-icon-box:hover {
+    background-color: var(--accent-gold);
+    border-color: var(--accent-gold);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.border-bottom-light {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.footer-credit {
+    font-size: 0.75rem;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+/* -- Footer Mobile Alignment Fix -- */
+@media (max-width: 991px) {
+    .site-footer .row {
+        text-align: center !important;
+    }
+
+    .site-footer .col-lg-4,
+    .site-footer .col-md-6 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center !important;
+        margin-bottom: 25px;
+    }
+
+    .footer-desc {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center !important;
+    }
+
+    .footer-nav-links {
+        justify-content: center !important;
+        flex-wrap: wrap;
+        gap: 15px !important;
+    }
+}

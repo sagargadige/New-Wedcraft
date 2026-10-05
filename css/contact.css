@@ -1,0 +1,67 @@
+/* -- Contact & Location Section (Light Theme) -- */
+.contact-section {
+    padding: 10px 0 60px 0;
+    background-color: var(--bg-light); /* Website ka standard Alabaster light background */
+    position: relative;
+}
+
+.contact-section .section-title {
+    color: var(--text-dark);
+}
+
+.contact-section .section-subtitle {
+    color: var(--text-muted);
+}
+
+/* Action Buttons */
+.btn-contact-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 32px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: #fff;
+}
+.whatsapp-btn:hover {
+    background-color: #1ebe5d;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.25);
+}
+
+.instagram-btn {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: #fff;
+}
+.instagram-btn:hover {
+    opacity: 0.95;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(214, 36, 159, 0.25);
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Full Width Prominent Map Container */
+.full-map-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    background-color: #fff;
+}

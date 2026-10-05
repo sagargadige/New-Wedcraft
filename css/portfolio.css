@@ -1,0 +1,147 @@
+/* -- Portfolio Section -- */
+.portfolio-section {
+    padding: 100px 0;
+    background-color: #ffffff; /* Gives contrast from the alabaster background of services */
+}
+
+/* -- Video Card Styling -- */
+.video-card {
+    cursor: pointer;
+}
+
+.video-thumbnail {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Dark gradient overlay so play button pops */
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.4s ease;
+}
+
+/* Luxury Glassmorphism Play Button */
+.play-btn {
+    width: 75px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all 0.4s ease;
+    transform: scale(0.9);
+}
+
+.play-btn svg {
+    width: 26px;
+    height: 26px;
+    margin-left: 4px; /* Optical centering for play icon */
+}
+
+/* Hover Effects */
+.video-card:hover .video-thumbnail img {
+    transform: scale(1.06);
+}
+
+.video-card:hover .video-overlay {
+    background: rgba(0,0,0,0.45);
+}
+
+.video-card:hover .play-btn {
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+    transform: scale(1);
+    box-shadow: 0 15px 30px rgba(154, 123, 79, 0.4);
+}
+
+/* Card Text Info */
+.video-info {
+    margin-top: 25px;
+}
+
+.video-category {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.video-title {
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+/* -- The Dark Lightbox (Pop-up Player) -- */
+.video-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.95); /* Deep cinematic dark */
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.video-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content {
+    width: 90%;
+    max-width: 1050px;
+    position: relative;
+    transform: translateY(30px);
+    transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.video-lightbox.active .lightbox-content {
+    transform: translateY(0);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1060;
+    font-family: sans-serif;
+    font-weight: 200;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: var(--accent-gold);
+}

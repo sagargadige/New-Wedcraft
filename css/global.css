@@ -1,0 +1,107 @@
+/* -- Ultra Premium Global Colors & Fonts -- */
+:root {
+    --bg-light: #F9F8F6; /* Alabaster / Crisp clean white */
+    --text-dark: #121212; /* Deep Charcoal - stark contrast */
+    --text-muted: #5A5A5A;
+    --accent-gold: #9A7B4F; /* Rich, matte luxury bronze/gold */
+    --accent-dark: #000000;
+    
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Jost', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    margin: 0;
+}
+
+p {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* Custom Selection Color */
+::selection {
+    background: var(--accent-gold);
+    color: #fff;
+}
+
+/* -- Floating WhatsApp Button Styles -- */
+.floating-whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.floating-whatsapp-btn svg {
+    width: 32px;
+    height: 32px;
+}
+
+.floating-whatsapp-btn:hover {
+    background-color: #1ebe5d;
+    color: #fff;
+    transform: scale(1.1) translateY(-4px);
+    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6);
+}
+
+/* -- Mobile Responsive Fixes for Hero & Header -- */
+@media (max-width: 991px) {
+    .site-header {
+        position: relative; /* Mobile par absolute hata kar normal flow me kiya */
+        background-color: var(--bg-light); /* Background match karne ke liye */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    }
+
+    .hero-section {
+        height: auto; /* Mobile par fixed 100vh hata kar auto height di */
+        min-height: auto;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .hero-content .d-flex {
+        justify-content: center; /* Buttons ko mobile me center align karne ke liye */
+    }
+
+    .arch-composition {
+        width: 75%;
+        max-width: 300px;
+    }
+}

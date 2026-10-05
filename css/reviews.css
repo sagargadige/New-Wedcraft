@@ -1,0 +1,52 @@
+/* -- Reviews Section -- */
+.reviews-section {
+    padding: 100px 0;
+    background-color: var(--bg-light); 
+    overflow: hidden; 
+}
+
+/* -- Swiper Slider Adjustments -- */
+.reviews-slider {
+    padding: 20px 10px 60px 10px; 
+}
+
+/* -- Continuous Smooth Scrolling Transition -- */
+.reviews-slider .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+/* Hide Pagination Dots */
+.swiper-pagination {
+    display: none !important;
+}
+
+/* -- Mobile Frame Design for Screenshots -- */
+.review-card-frame {
+    background-color: #fff;
+    border-radius: 24px; 
+    padding: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+    height: 500px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover par card lift hoga aur cursor pointer ban jayega */
+.review-card-frame:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    cursor: pointer; 
+}
+
+.review-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top; 
+    border-radius: 14px; 
+    background-color: #eee; 
+}

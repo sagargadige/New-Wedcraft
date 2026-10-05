@@ -1,0 +1,107 @@
+/* -- Services Section Container -- */
+.services-section {
+    padding: 100px 0;
+    background-color: var(--bg-light);
+    position: relative;
+}
+
+/* -- Section Headers -- */
+.section-title {
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    letter-spacing: -1px;
+}
+
+.section-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* -- Luxury Service Cards -- */
+.service-card {
+    background-color: #ffffff; /* Pure white background to pop out from alabaster */
+    padding: 50px 45px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    z-index: 1;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    transition: all 0.4s ease; /* Smooth animation time */
+}
+
+/* 3D Hover Lift Effect */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+    border-color: rgba(154, 123, 79, 0.2); /* Soft gold border on hover */
+}
+
+/* Decorative Gold Bottom Line on Hover */
+.service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: var(--accent-gold);
+    transition: width 0.4s ease;
+}
+
+.service-card:hover::after {
+    width: 100%; /* Line expands on hover */
+}
+
+/* -- Editorial Background Numbers -- */
+.service-bg-number {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-family: var(--font-heading);
+    font-size: 8rem;
+    line-height: 1;
+    font-weight: 600;
+    color: var(--text-dark);
+    opacity: 0.03; /* Extremely faint, watermark style */
+    z-index: -1;
+    transition: all 0.4s ease;
+    user-select: none;
+}
+
+.service-card:hover .service-bg-number {
+    opacity: 0.08; /* Slightly visible on hover */
+    color: var(--accent-gold);
+    transform: scale(1.05);
+}
+
+/* -- Card Typography -- */
+.service-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    position: relative;
+}
+
+/* Little gold dash above the title */
+.service-title::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.service-desc {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0;
+}
