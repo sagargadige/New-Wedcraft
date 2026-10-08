@@ -105,3 +105,84 @@ p {
         max-width: 300px;
     }
 }
+/* -- Luxury Preloader Styling -- */
+.preloader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fcfbf9; /* Website ka alabaster light theme color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.preloader-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* WC Monogram Animation */
+.wc-logo-loader {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+    letter-spacing: -2px;
+    animation: pulseGlow 1.8s infinite ease-in-out;
+}
+
+/* Elegant growing gold line beneath */
+.loader-line {
+    width: 0px;
+    height: 2px;
+    background-color: var(--accent-gold);
+    margin: 15px 0;
+    animation: lineExpand 1.8s infinite ease-in-out;
+}
+
+/* Subtitle branding */
+.loader-brand-text {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--text-muted);
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* Keyframes for Glowing Pulse */
+@keyframes pulseGlow {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+        text-shadow: 0 10px 30px rgba(180, 150, 110, 0.3);
+    }
+    100% {
+        transform: scale(0.95);
+        opacity: 0.5;
+    }
+}
+
+/* Keyframes for Line Expansion */
+@keyframes lineExpand {
+    0% { width: 20px; opacity: 0.2; }
+    50% { width: 90px; opacity: 1; }
+    100% { width: 20px; opacity: 0.2; }
+}
+
+/* Loaded class to hide preloader smoothly */
+.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}

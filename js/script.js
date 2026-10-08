@@ -72,3 +72,15 @@ document.addEventListener("DOMContentLoaded", () => {
             reviewsSlider.autoplay.start();
         });
     }
+    // ==========================================
+    // PRELOADER REMOVAL LOGIC
+    // ==========================================
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            // Thoda sa luxury delay (0.8 seconds) taki animation achhe se dikhe
+            setTimeout(() => {
+                preloader.classList.add('preloader-hidden');
+            }, 800);
+        }
+    });
