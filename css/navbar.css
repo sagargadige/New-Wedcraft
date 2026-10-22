@@ -1,0 +1,14 @@
+/* -- Navbar Logo Styling -- */
+.site-logo-img {
+  height: 25px !important; /* Aap apne hisab se height 40px ya 50px kar sakte hain */
+  width: auto !important;
+  object-fit: contain;
+  display: block;
+}
+
+/* Mobile screen ke liye agar size thodi choti karni ho */
+@media (max-width: 991px) {
+  .site-logo-img {
+    height: 38px !important;
+  }
+}

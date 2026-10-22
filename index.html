@@ -1,16 +1,14 @@
 <!doctype html>
 
 <html lang="en">
-
   <head>
-
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon / Tab Icon -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/title.svg">
-  
+    <link rel="icon" type="image/svg+xml" href="assets/images/title.svg" />
+
     <title>WedCraft | Premium White-Label Editing Partners</title>
 
     <link
@@ -35,28 +33,192 @@
     <link rel="stylesheet" href="css/reviews.css" />
     <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/footer.css" />
-
+    <link rel="stylesheet" href="css/navbar.css" />
   </head>
 
   <body>
-
     <!-- ==========================================
-         LUXURY PRELOADER (WC ANIMATION)
-    =========================================== -->
-    <div id="preloader" class="preloader-wrapper">
-      <div class="preloader-content">
-        <div class="wc-logo-loader">WC</div>
-        <div class="loader-line"></div>
-        <span class="loader-brand-text">WedCraft Films</span>
+     WCF CINEMATIC APERTURE & SWOOSH PRELOADER (PERFECTED)
+=========================================== -->
+    <div id="wcf-preloader" class="wcf-preloader">
+      <!-- Cinematic Top & Bottom Shutter Panels for Luxury Exit -->
+      <div class="shutter-panel shutter-top"></div>
+      <div class="shutter-panel shutter-bottom"></div>
+
+      <div
+        class="loader-stage container d-flex flex-column align-items-center justify-content-center"
+      >
+        <!-- Interactive Vector Recreation of your WCF Logo -->
+        <div class="wcf-svg-wrapper">
+          <svg
+            viewBox="0 0 850 350"
+            class="wcf-logo-svg"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <!-- Rich Metallic Luxury Gold Gradient -->
+              <linearGradient id="wcfGold" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#8c6a3d" />
+                <stop offset="50%" stop-color="#c5a06d" />
+                <stop offset="100%" stop-color="#967344" />
+              </linearGradient>
+
+              <!-- Shimmering Highlight Gradient for Aperture Blades -->
+              <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#aa8553" />
+                <stop offset="50%" stop-color="#d4b281" />
+                <stop offset="100%" stop-color="#8c6a3d" />
+              </linearGradient>
+
+              <!-- FIXED: Larger & Properly Centered Circular Clip for the Aperture (Moved out from deep inside C) -->
+              <clipPath id="apertureCircle">
+                <circle cx="458" cy="184" r="76" />
+              </clipPath>
+
+              <!-- NEW: Buttery-Smooth Left-to-Right Reveal Mask for the Tapered Golden Swoosh -->
+              <clipPath id="swooshRevealClip">
+                <rect
+                  class="swoosh-clip-rect"
+                  x="420"
+                  y="130"
+                  width="0"
+                  height="200"
+                />
+              </clipPath>
+            </defs>
+
+            <!-- ================= 1. LETTER "W" (With Signature Diagonal Cut) ================= -->
+            <g class="wcf-letter w-letter">
+              <path
+                d="M 35 72 H 122 V 78 C 102 78 96 86 105 110 L 152 232 L 222 70 L 298 242 L 320 190 L 330 212 L 294 295 L 218 125 L 146 295 L 68 105 C 58 82 50 78 35 78 Z"
+                fill="#0d0d0d"
+              />
+              <!-- Clean White Diagonal Gap inside W -->
+              <polygon
+                points="158,218 175,255 190,222 173,185"
+                fill="#fcfbf9"
+              />
+            </g>
+
+            <!-- ================= 2. LETTER "C" ================= -->
+            <g class="wcf-letter c-letter">
+              <path
+                d="M 555 118 C 525 65 445 58 386 85 C 322 115 302 205 350 262 C 396 314 492 312 546 264 L 539 255 C 495 292 420 294 382 246 C 346 198 358 118 412 90 C 460 66 520 82 545 125 Z"
+                fill="#0d0d0d"
+              />
+            </g>
+
+            <!-- ================= 3. LETTER "F" ================= -->
+            <g class="wcf-letter f-letter">
+              <path
+                d="M 575 72 H 795 L 798 135 H 790 C 782 95 760 84 715 84 H 655 V 265 C 655 282 668 286 692 286 V 293 H 570 V 286 C 594 286 605 282 605 265 V 100 C 605 82 594 79 575 79 Z"
+                fill="#0d0d0d"
+              />
+            </g>
+
+            <!-- ================= 4. SPINNING GOLDEN CAMERA APERTURE (Properly Positioned & Sized) ================= -->
+            <g clip-path="url(#apertureCircle)">
+              <g class="aperture-spinner">
+                <!-- Centered at (458, 184) so it sits naturally in the open center of C, not buried inside -->
+                <g transform="translate(458, 184)">
+                  <polygon
+                    points="18,-31 108,-31 56,62"
+                    fill="url(#goldGlow)"
+                    stroke="#fcfbf9"
+                    stroke-width="6.5"
+                    stroke-linejoin="round"
+                  />
+                  <polygon
+                    points="18,-31 108,-31 56,62"
+                    fill="url(#goldGlow)"
+                    stroke="#fcfbf9"
+                    stroke-width="6.5"
+                    stroke-linejoin="round"
+                    transform="rotate(60)"
+                  />
+                  <polygon
+                    points="18,-31 108,-31 56,62"
+                    fill="url(#goldGlow)"
+                    stroke="#fcfbf9"
+                    stroke-width="6.5"
+                    stroke-linejoin="round"
+                    transform="rotate(120)"
+                  />
+                  <polygon
+                    points="18,-31 108,-31 56,62"
+                    fill="url(#goldGlow)"
+                    stroke="#fcfbf9"
+                    stroke-width="6.5"
+                    stroke-linejoin="round"
+                    transform="rotate(180)"
+                  />
+                  <polygon
+                    points="18,-31 108,-31 56,62"
+                    fill="url(#goldGlow)"
+                    stroke="#fcfbf9"
+                    stroke-width="6.5"
+                    stroke-linejoin="round"
+                    transform="rotate(240)"
+                  />
+                  <polygon
+                    points="18,-31 108,-31 56,62"
+                    fill="url(#goldGlow)"
+                    stroke="#fcfbf9"
+                    stroke-width="6.5"
+                    stroke-linejoin="round"
+                    transform="rotate(300)"
+                  />
+                </g>
+              </g>
+            </g>
+
+            <!-- ================= 5. GOLDEN SWOOSH (Smooth Liquid Calligraphic Reveal from C into F) ================= -->
+            <g clip-path="url(#swooshRevealClip)">
+              <!-- White Cutout Border that cleanly slices through the black 'F' pillar just like your logo -->
+              <path
+                d="M 442 296 C 518 298, 565 245, 625 198 C 675 158, 725 152, 762 186 C 724 166, 678 175, 630 214 C 570 262, 515 304, 442 296 Z"
+                fill="#fcfbf9"
+                stroke="#fcfbf9"
+                stroke-width="14"
+                stroke-linejoin="round"
+              />
+
+              <!-- Exact Tapered Golden Calligraphic Swoosh (Thin at C bottom -> Thick across F -> Sharp tip at right) -->
+              <path
+                d="M 438 295 C 515 298, 562 246, 622 196 C 674 153, 726 148, 765 188 C 725 164, 678 173, 628 214 C 568 263, 514 303, 438 295 Z"
+                fill="url(#wcfGold)"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <!-- Minimalist Progress & Status Bar -->
+        <div class="loader-meta text-center mt-3">
+          <div class="loader-progress-track">
+            <div id="loader-progress-fill" class="loader-progress-fill"></div>
+          </div>
+          <div
+            class="d-flex justify-content-between align-items-center mt-2 px-1"
+          >
+            <span id="loader-status-text" class="loader-status-text"
+              >Focusing Lens...</span
+            >
+            <span id="loader-percentage" class="loader-percentage">0%</span>
+          </div>
+        </div>
       </div>
     </div>
     <header class="site-header">
-
       <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4">
-
         <div class="container">
-
-          <a class="navbar-brand wedcraft-logo" href="#">WedCraft.</a>
+          <!-- Text ki jagah image logo add kiya gaya hai -->
+          <a class="navbar-brand" href="#">
+            <img
+              src="assets/images/without-bg-logo.png"
+              alt="WedCraft Films Logo"
+              class="site-logo-img"
+            />
+          </a>
 
           <button
             class="navbar-toggler border-0"
@@ -64,90 +226,73 @@
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
           >
-
             <span class="navbar-toggler-icon"></span>
-
           </button>
 
           <div
             class="collapse navbar-collapse justify-content-end"
             id="navbarNav"
           >
-
             <ul class="navbar-nav align-items-center">
-
               <li class="nav-item">
-
                 <a class="nav-link px-4" href="#services">Services</a>
-
               </li>
-
               <li class="nav-item">
-
                 <a class="nav-link px-4" href="#portfolio">Portfolio</a>
-
               </li>
-
               <li class="nav-item">
-
                 <a class="nav-link px-4" href="#reviews">Reviews</a>
-
               </li>
-
               <li class="nav-item ms-lg-4">
-
                 <a class="btn-partner" href="#contact">Partner With Us</a>
-
               </li>
-
             </ul>
-
           </div>
-
         </div>
-
       </nav>
-
     </header>
 
-
     <main>
-
       <section id="hero" class="hero-section">
-  <div class="container h-100">
-    <div class="row h-100 align-items-center">
-      <div class="col-lg-6 hero-content position-relative z-index-2">
-        <div class="badge-premium mb-3">
-          India's Elite White-Label Partners
-        </div>
-        <h1 class="hero-title">
-          We don't just edit videos.<br />
-          <span class="italic-gold">
-            We bring memories back to life.
-          </span>
-        </h1>
-        <p class="hero-description mt-4">
-          Editing is more than cutting clips to a beat. We preserve the
-          raw emotion of every frame, delivering cinematic masterpieces
-          that allow your clients to relive their most intimate moments.
-        </p>
-        <div class="mt-4 d-flex align-items-center gap-4">
-          <a href="#services" class="btn-solid-gold">
-            Explore Services
-          </a>
-          <a href="#portfolio" class="link-explore">
-            View Portfolio <span class="arrow">→</span>
-          </a>
-        </div>
-      </div>
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col-lg-6 hero-content position-relative z-index-2">
+              <div class="badge-premium mb-3">
+                India's Elite White-Label Partners
+              </div>
+              <h1 class="hero-title">
+                We don't just edit videos.<br />
+                <span class="italic-gold">
+                  We bring memories back to life.
+                </span>
+              </h1>
+              <p class="hero-description mt-4">
+                Editing is more than cutting clips to a beat. We preserve the
+                raw emotion of every frame, delivering cinematic masterpieces
+                that allow your clients to relive their most intimate moments.
+              </p>
+              <div class="mt-4 d-flex align-items-center gap-4">
+                <a href="#services" class="btn-solid-gold">
+                  Explore Services
+                </a>
+                <a href="#portfolio" class="link-explore">
+                  View Portfolio <span class="arrow">→</span>
+                </a>
+              </div>
+            </div>
 
-      <div class="col-lg-6 hero-image-wrapper">
+            <div class="col-lg-6 hero-image-wrapper">
               <!-- Poora image container clickable banaya gaya hai -->
-              <a href="https://www.instagram.com/itseditorvivek/" target="_blank" class="founder-social-link" title="Visit Vivek Mishra's Instagram">
+              <a
+                href="https://www.instagram.com/itseditorvivek/"
+                target="_blank"
+                class="founder-social-link"
+                title="Visit Vivek Mishra's Instagram"
+              >
                 <div class="cinematic-frame-composition">
                   <!-- Decorative Modern Backdrop Accent -->
                   <div class="backdrop-glow"></div>
-                  
+
                   <!-- Main Unique Image Frame -->
                   <div class="luxury-image-container">
                     <img
@@ -155,7 +300,7 @@
                       alt="Vivek Mishra - WedCraft Founder"
                       class="img-fluid main-img"
                     />
-                    
+
                     <!-- Floating Glass Badge over the image -->
                     <div class="floating-studio-badge">
                       <span class="badge-dot"></span>
@@ -167,188 +312,120 @@
 
               <!-- Founder name aur title ko bhi clickable banaya gaya hai -->
               <div class="founder-info mt-4">
-                <a href="https://www.instagram.com/itseditorvivek/" target="_blank" class="founder-name-link">
+                <a
+                  href="https://www.instagram.com/itseditorvivek/"
+                  target="_blank"
+                  class="founder-name-link"
+                >
                   <h5 class="founder-name">Vivek Mishra</h5>
                 </a>
-                <p class="founder-title">
-                  Creative Director & Founder
-                </p>
+                <p class="founder-title">Creative Director & Founder</p>
               </div>
             </div>
-    </div>
-  </div>
+          </div>
+        </div>
       </section>
 
-
       <section id="services" class="services-section">
-
         <div class="container">
-
           <div class="row mb-5 pb-3">
-
             <div class="col-lg-8 mx-auto text-center">
+              <span class="badge-premium mb-2"> Our Expertise </span>
 
-              <span class="badge-premium mb-2">
-                Our Expertise
-              </span>
-
-              <h2 class="section-title">
-                The Art of Story Crafting
-              </h2>
+              <h2 class="section-title">The Art of Story Crafting</h2>
 
               <p class="section-subtitle mt-3">
-
                 We provide 100% white-label post-production services. You shoot
                 the masterpiece, we polish it to perfection.
-
               </p>
-
             </div>
-
           </div>
 
-
           <div class="row g-4">
-
             <div class="col-md-6">
-
               <div class="service-card">
-
                 <div class="service-bg-number">01</div>
 
-                <h3 class="service-title">
-                  Pre Wedding Shoot Editing
-                </h3>
+                <h3 class="service-title">Pre Wedding Shoot Editing</h3>
 
                 <p class="service-desc">
-
                   Transforming raw clips into cinematic love stories. We use
                   industry-grade color grading and seamless transitions to
                   create high-end visual poetry that couples love to share.
-
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="col-md-6">
-
               <div class="service-card">
-
                 <div class="service-bg-number">02</div>
 
-                <h3 class="service-title">
-                  Wedding Film Editing
-                </h3>
+                <h3 class="service-title">Wedding Film Editing</h3>
 
                 <p class="service-desc">
-
                   Crafting full-length, emotionally driven wedding
                   documentaries. We carefully preserve the grand scale of the
                   event while maintaining the intimacy of the hidden moments.
-
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="col-md-6">
-
               <div class="service-card">
-
                 <div class="service-bg-number">03</div>
 
-                <h3 class="service-title">
-                  Wedding Highlights
-                </h3>
+                <h3 class="service-title">Wedding Highlights</h3>
 
                 <p class="service-desc">
-
                   High-energy, visually striking short films perfectly paced to
                   the music. Designed to be a studio's best marketing tool and a
                   couple's favorite social media memory.
-
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="col-md-6">
-
               <div class="service-card">
-
                 <div class="service-bg-number">04</div>
 
-                <h3 class="service-title">
-                  Commercial Edits
-                </h3>
+                <h3 class="service-title">Commercial Edits</h3>
 
                 <p class="service-desc">
-
                   Sleek, professional, and brand-focused video editing. Tailored
                   specifically for corporate storytelling, brand campaigns, and
                   commercial advertisements.
-
                 </p>
-
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
-
       <section id="portfolio" class="portfolio-section">
-
         <div class="container">
-
           <div class="row mb-5 pb-3">
-
             <div class="col-lg-8 mx-auto text-center">
+              <span class="badge-premium mb-2"> Proof of Work </span>
 
-              <span class="badge-premium mb-2">
-                Proof of Work
-              </span>
-
-              <h2 class="section-title">
-                Visual Masterpieces
-              </h2>
+              <h2 class="section-title">Visual Masterpieces</h2>
 
               <p class="section-subtitle mt-3">
-
-                Behind every frame is a story waiting to be felt. Press play and experience how we blend emotion, rhythm, and artistry to turn your raw moments into pure cinematic magic.
-
+                Behind every frame is a story waiting to be felt. Press play and
+                experience how we blend emotion, rhythm, and artistry to turn
+                your raw moments into pure cinematic magic.
               </p>
-
             </div>
-
           </div>
 
-
           <div class="row g-5">
-
-
             <!-- Video 1 -->
 
             <div class="col-lg-6">
-
               <div
                 class="video-card"
                 data-video-src="https://www.youtube.com/embed/P2pCoS2h8rQ?autoplay=1&rel=0"
               >
-
                 <div class="video-thumbnail">
-
                   <img
                     src="https://img.youtube.com/vi/P2pCoS2h8rQ/maxresdefault.jpg"
                     alt="Wedding Film - Yakshi & Yash"
@@ -356,56 +433,34 @@
                   />
 
                   <div class="video-overlay">
-
                     <div class="play-btn">
-
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-
-                        <path
-                          d="M8 5V19L19 12L8 5Z"
-                          fill="currentColor"
-                        />
-
+                        <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
                       </svg>
-
                     </div>
-
                   </div>
-
                 </div>
 
                 <div class="video-info">
+                  <span class="video-category"> Full Wedding Film </span>
 
-                  <span class="video-category">
-                    Full Wedding Film
-                  </span>
-
-                  <h3 class="video-title">
-                    Madly in Love - A Chennai Wedding
-                  </h3>
-
+                  <h3 class="video-title">Madly in Love - A Chennai Wedding</h3>
                 </div>
-
               </div>
-
             </div>
-
 
             <!-- Video 2 -->
 
             <div class="col-lg-6">
-
               <div
                 class="video-card"
                 data-video-src="https://www.youtube.com/embed/2wwb2W83mus?autoplay=1&rel=0"
               >
-
                 <div class="video-thumbnail">
-
                   <img
                     src="https://img.youtube.com/vi/2wwb2W83mus/maxresdefault.jpg"
                     alt="Pre Wedding Edit - Nikhil & Nishita"
@@ -413,56 +468,34 @@
                   />
 
                   <div class="video-overlay">
-
                     <div class="play-btn">
-
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-
-                        <path
-                          d="M8 5V19L19 12L8 5Z"
-                          fill="currentColor"
-                        />
-
+                        <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
                       </svg>
-
                     </div>
-
                   </div>
-
                 </div>
 
                 <div class="video-info">
+                  <span class="video-category"> Pre-Wedding Shoot </span>
 
-                  <span class="video-category">
-                    Pre-Wedding Shoot
-                  </span>
-
-                  <h3 class="video-title">
-                    A Love Story in Georgia
-                  </h3>
-
+                  <h3 class="video-title">A Love Story in Georgia</h3>
                 </div>
-
               </div>
-
             </div>
-
 
             <!-- Video 3 -->
 
             <div class="col-lg-6">
-
               <div
                 class="video-card"
                 data-video-src="https://www.youtube.com/embed/zyRkJADhKBE?autoplay=1&rel=0"
               >
-
                 <div class="video-thumbnail">
-
                   <img
                     src="https://img.youtube.com/vi/zyRkJADhKBE/maxresdefault.jpg"
                     alt="Pre Wedding Film - Shresth & Anjali"
@@ -470,56 +503,34 @@
                   />
 
                   <div class="video-overlay">
-
                     <div class="play-btn">
-
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-
-                        <path
-                          d="M8 5V19L19 12L8 5Z"
-                          fill="currentColor"
-                        />
-
+                        <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
                       </svg>
-
                     </div>
-
                   </div>
-
                 </div>
 
                 <div class="video-info">
+                  <span class="video-category"> Snowy Pre-Wedding </span>
 
-                  <span class="video-category">
-                    Snowy Pre-Wedding
-                  </span>
-
-                  <h3 class="video-title">
-                    Two Hearts, One Journey
-                  </h3>
-
+                  <h3 class="video-title">Two Hearts, One Journey</h3>
                 </div>
-
               </div>
-
             </div>
-
 
             <!-- Video 4 -->
 
             <div class="col-lg-6">
-
               <div
                 class="video-card"
                 data-video-src="https://www.youtube.com/embed/Vy3OaGugSFQ?autoplay=1&rel=0"
               >
-
                 <div class="video-thumbnail">
-
                   <img
                     src="https://img.youtube.com/vi/Vy3OaGugSFQ/maxresdefault.jpg"
                     alt="Wedding Highlight - Jainam & Shifali"
@@ -527,329 +538,207 @@
                   />
 
                   <div class="video-overlay">
-
                     <div class="play-btn">
-
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-
-                        <path
-                          d="M8 5V19L19 12L8 5Z"
-                          fill="currentColor"
-                        />
-
+                        <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
                       </svg>
-
                     </div>
-
                   </div>
-
                 </div>
 
                 <div class="video-info">
+                  <span class="video-category"> Wedding Highlight </span>
 
-                  <span class="video-category">
-                    Wedding Highlight
-                  </span>
-
-                  <h3 class="video-title">
-                    A Symphony of Emotions
-                  </h3>
-
+                  <h3 class="video-title">A Symphony of Emotions</h3>
                 </div>
-
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
-
       <section id="reviews" class="reviews-section">
-
         <div class="container">
-
           <div class="row mb-5 pb-2">
-
             <div class="col-lg-8 mx-auto text-center">
+              <span class="badge-premium mb-2"> Client Love </span>
 
-              <span class="badge-premium mb-2">
-                Client Love
-              </span>
-
-              <h2 class="section-title">
-                Words of Appreciation
-              </h2>
+              <h2 class="section-title">Words of Appreciation</h2>
 
               <p class="section-subtitle mt-3">
-
                 Don't just take our word for it. Here is what top studios and
                 filmmakers have to say about our white-label post-production
                 magic.
-
               </p>
-
             </div>
-
           </div>
-
 
           <div class="swiper reviews-slider">
-
             <div class="swiper-wrapper">
-
-
               <div class="swiper-slide">
-
                 <div class="review-card-frame">
-
                   <img
                     src="assets/images/review1.jpg"
                     alt="Client Review 1"
                     class="review-img"
                   />
-
                 </div>
-
               </div>
 
-
               <div class="swiper-slide">
-
                 <div class="review-card-frame">
-
                   <img
                     src="assets/images/review2.jpg"
                     alt="Client Review 2"
                     class="review-img"
                   />
-
                 </div>
-
               </div>
 
-
               <div class="swiper-slide">
-
                 <div class="review-card-frame">
-
                   <img
                     src="assets/images/review3.jpg"
                     alt="Client Review 3"
                     class="review-img"
                   />
-
                 </div>
-
               </div>
 
-
               <div class="swiper-slide">
-
                 <div class="review-card-frame">
-
                   <img
                     src="assets/images/review4.jpg"
                     alt="Client Review 4"
                     class="review-img"
                   />
-
                 </div>
-
               </div>
 
-
               <div class="swiper-slide">
-
                 <div class="review-card-frame">
-
                   <img
                     src="assets/images/review5.jpg"
                     alt="Client Review 5"
                     class="review-img"
                   />
-
                 </div>
-
               </div>
 
-
               <div class="swiper-slide">
-
                 <div class="review-card-frame">
-
                   <img
                     src="assets/images/review1.jpg"
                     alt="Client Review 1"
                     class="review-img"
                   />
-
                 </div>
-
               </div>
 
-
               <div class="swiper-slide">
-
                 <div class="review-card-frame">
-
                   <img
                     src="assets/images/review2.jpg"
                     alt="Client Review 2"
                     class="review-img"
                   />
-
                 </div>
-
               </div>
 
-
               <div class="swiper-slide">
-
                 <div class="review-card-frame">
-
                   <img
                     src="assets/images/review3.jpg"
                     alt="Client Review 3"
                     class="review-img"
                   />
-
                 </div>
-
               </div>
 
-
               <div class="swiper-slide">
-
                 <div class="review-card-frame">
-
                   <img
                     src="assets/images/review4.jpg"
                     alt="Client Review 4"
                     class="review-img"
                   />
-
                 </div>
-
               </div>
 
-
               <div class="swiper-slide">
-
                 <div class="review-card-frame">
-
                   <img
                     src="assets/images/review5.jpg"
                     alt="Client Review 5"
                     class="review-img"
                   />
-
                 </div>
-
               </div>
-
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
-
       <section id="contact" class="contact-section">
-
         <div class="container">
-
           <div class="row justify-content-center mb-5">
-
             <div class="col-lg-10 text-center">
+              <span class="badge-premium mb-2"> Ready to Collaborate? </span>
 
-              <span class="badge-premium mb-2">
-                Ready to Collaborate?
-              </span>
-
-              <h2 class="section-title">
-                Let's Bring Memories Back to Life
-              </h2>
+              <h2 class="section-title">Let's Bring Memories Back to Life</h2>
 
               <p class="section-subtitle mt-3 mb-4">
-
                 Partner with India's elite white-label video editors. Send us
                 your footage, and let's craft cinematic masterpieces together.
-
               </p>
 
-
               <div class="d-flex justify-content-center flex-wrap gap-4 mt-4">
-
-
                 <a
                   href="https://wa.me/919558841858?text=Hi%20WedCraft,%20I%20checked%20your%20editing%20portfolio%20and%20want%20to%20discuss%20a%20project%20for%20my%20studio."
                   target="_blank"
                   class="btn-contact-action whatsapp-btn"
                 >
-
                   <svg
                     class="contact-icon"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
-
                     <path
                       d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
                     />
-
                   </svg>
 
                   Chat on WhatsApp
-
                 </a>
-
 
                 <a
                   href="https://www.instagram.com/wedcraft.films/"
                   target="_blank"
                   class="btn-contact-action instagram-btn"
                 >
-
                   <svg
                     class="contact-icon"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
-
                     <path
                       d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.354 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
                     />
-
                   </svg>
 
                   Follow on Instagram
-
                 </a>
-
               </div>
-
             </div>
-
           </div>
 
-
           <div class="row mt-5">
-
             <div class="col-12">
-
               <div class="full-map-wrapper">
-
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.7847908346002!2d72.91926267920377!3d20.920976330941613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0f7b512e913bd%3A0x96c66e9427ff3f5c!2sWedCraft%20Films!5e0!3m2!1sen!2sin!4v1791205299800!5m2!1sen!2sin"
                   width="100%"
@@ -860,26 +749,17 @@
                   referrerpolicy="strict-origin-when-cross-origin"
                 >
                 </iframe>
-
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
-
       <div id="videoLightbox" class="video-lightbox">
-
         <div class="lightbox-close">&times;</div>
 
         <div class="lightbox-content">
-
           <div class="ratio ratio-16x9">
-
             <iframe
               id="lightboxIframe"
               src=""
@@ -887,54 +767,45 @@
               frameborder="0"
               allow="autoplay; fullscreen; picture-in-picture"
             ></iframe>
-
           </div>
-
         </div>
-
       </div>
 
       <!-- ==========================================
          FLOATING WHATSAPP BUTTON (BOTTOM-RIGHT)
     =========================================== -->
-    <a href="https://wa.me/919558841858?text=Hi%20WedCraft,%20I%20checked%20your%20editing%20portfolio%20and%20want%20to%20discuss%20a%20project%20for%20my%20studio." 
-       target="_blank" 
-       class="floating-whatsapp-btn" 
-       title="Chat with WedCraft">
-       <svg viewBox="0 0 24 24" fill="currentColor">
-         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-       </svg>
-    </a>
+      <a
+        href="https://wa.me/919558841858?text=Hi%20WedCraft,%20I%20checked%20your%20editing%20portfolio%20and%20want%20to%20discuss%20a%20project%20for%20my%20studio."
+        target="_blank"
+        class="floating-whatsapp-btn"
+        title="Chat with WedCraft"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+          />
+        </svg>
+      </a>
     </main>
 
-
     <footer class="site-footer">
-
       <div class="container">
-
-
-        <div class="row align-items-center justify-content-between py-5 border-bottom-light">
-
-
+        <div
+          class="row align-items-center justify-content-between py-5 border-bottom-light"
+        >
           <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
-
-            <a href="#" class="footer-brand">
-              WedCraft.
-            </a>
+            <a href="#" class="footer-brand"> WedCraft. </a>
 
             <p class="footer-desc mt-2 mb-0">
-
-              India's elite white-label post-production partners for creative studios.
-
+              India's elite white-label post-production partners for creative
+              studios.
             </p>
-
           </div>
 
-
           <div class="col-lg-4 text-center mb-4 mb-lg-0">
-
-            <ul class="footer-nav-links list-unstyled d-flex justify-content-center gap-4 mb-0">
-
+            <ul
+              class="footer-nav-links list-unstyled d-flex justify-content-center gap-4 mb-0"
+            >
               <li>
                 <a href="#services">Services</a>
               </li>
@@ -950,37 +821,23 @@
               <li>
                 <a href="#contact">Contact</a>
               </li>
-
             </ul>
-
           </div>
 
-
           <div class="col-lg-4 text-center text-lg-end">
-
             <div class="footer-socials d-inline-flex gap-3">
-
-
               <a
                 href="https://www.instagram.com/wedcraft.films/"
                 target="_blank"
                 class="social-icon-box"
                 title="Instagram"
               >
-
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-
+                <svg viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.79 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.439-1.439-1.439z"
                   />
-
                 </svg>
-
               </a>
-
 
               <a
                 href="https://wa.me/919558841858?text=Hi%20WedCraft,%20I%20checked%20your%20editing%20portfolio%20and%20want%20to%20discuss%20a%20project%20for%20my%20studio."
@@ -988,58 +845,34 @@
                 class="social-icon-box"
                 title="WhatsApp"
               >
-
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-
+                <svg viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
                   />
-
                 </svg>
-
               </a>
-
             </div>
-
           </div>
-
         </div>
 
-
         <div class="row py-4 align-items-center">
-
           <div class="col-md-6 text-center text-md-start">
-
             <p class="footer-copy mb-0">
               &copy; 2026 WedCraft Films. All Rights Reserved.
             </p>
-
           </div>
 
           <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-
-            <p class="footer-credit mb-0">
-              Crafted for Elite Storytellers.
-            </p>
-
+            <p class="footer-credit mb-0">Crafted for Elite Storytellers.</p>
           </div>
-
         </div>
-
       </div>
-
     </footer>
-
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="js/script.js"></script>
-
   </body>
-
 </html>

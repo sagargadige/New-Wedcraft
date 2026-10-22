@@ -73,14 +73,71 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     // ==========================================
-    // PRELOADER REMOVAL LOGIC
-    // ==========================================
-    window.addEventListener('load', () => {
-        const preloader = document.getElementById('preloader');
-        if (preloader) {
-            // Thoda sa luxury delay (0.8 seconds) taki animation achhe se dikhe
-            setTimeout(() => {
-                preloader.classList.add('preloader-hidden');
-            }, 800);
-        }
+// WCF CINEMATIC LOADER CONTROLLER
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+    const preloader = document.getElementById("wcf-preloader");
+    const progressFill = document.getElementById("loader-progress-fill");
+    const percentageText = document.getElementById("loader-percentage");
+    const statusText = document.getElementById("loader-status-text");
+
+    if (!preloader) return;
+
+    // Lock scrolling while loader is active
+    document.body.style.overflow = "hidden";
+
+    let progress = 0;
+    let pageLoaded = false;
+
+    // Detect when actual website assets (images/videos) finish loading
+    window.addEventListener("load", () => {
+        pageLoaded = true;
     });
+
+    // Simulate smooth luxury progress counter
+    const counterInterval = setInterval(() => {
+        if (progress < 85) {
+            progress += Math.floor(Math.random() * 4) + 2;
+        } else if (pageLoaded && progress < 100) {
+            progress += 5;
+        } else if (!pageLoaded && progress >= 85) {
+            // Fallback if heavy videos take time: don't keep user waiting forever
+            progress += 1;
+        }
+
+        if (progress >= 100) {
+            progress = 100;
+            clearInterval(counterInterval);
+            triggerSwooshAndFinish();
+        }
+
+        // Update UI
+        progressFill.style.width = `${progress}%`;
+        percentageText.textContent = `${progress}%`;
+
+        // Update filmmaking status text dynamically
+        if (progress > 40 && progress < 80) {
+            statusText.textContent = "Grading Colors...";
+        } else if (progress >= 80 && progress < 100) {
+            statusText.textContent = "Crafting Story...";
+        }
+    }, 45);
+
+    function triggerSwooshAndFinish() {
+        statusText.textContent = "WedCraft Films";
+        
+        // STEP 1: Stop aperture spin & Draw Golden Swoosh from C into F
+        preloader.classList.add("draw-swoosh");
+
+        // STEP 2: Wait 950ms so user admires the golden swoosh animation, then open shutters
+        setTimeout(() => {
+            preloader.classList.add("loader-exit");
+            document.body.style.overflow = ""; // Restore scrolling
+
+            // STEP 3: Completely remove from DOM after shutter animation completes
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 950);
+        }, 950);
+    }
+});

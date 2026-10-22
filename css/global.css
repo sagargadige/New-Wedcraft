@@ -105,84 +105,209 @@ p {
         max-width: 300px;
     }
 }
-/* -- Luxury Preloader Styling -- */
-.preloader-wrapper {
+/* ==========================================
+   WCF LUXURY APERTURE & SWOOSH LOADER CSS (PERFECTED)
+=========================================== */
+.wcf-preloader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #fcfbf9; /* Website ka alabaster light theme color */
+    z-index: 999999;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99999;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
+    overflow: hidden;
+    pointer-events: all;
 }
 
-.preloader-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Top & Bottom Cinema Shutters */
+.shutter-panel {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50.5vh;
+    background-color: #fcfbf9;
+    z-index: 1;
+    transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.shutter-top { top: 0; }
+.shutter-bottom { bottom: 0; }
+
+/* Stage Content */
+.loader-stage {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 540px;
+    padding: 20px;
+    transition: opacity 0.45s ease, transform 0.55s ease;
 }
 
-/* WC Monogram Animation */
-.wc-logo-loader {
-    font-family: var(--font-heading);
-    font-size: 4rem;
-    font-weight: 600;
-    color: var(--accent-gold);
-    letter-spacing: -2px;
-    animation: pulseGlow 1.8s infinite ease-in-out;
+.wcf-svg-wrapper {
+    width: 100%;
+    max-width: 440px;
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.04));
 }
 
-/* Elegant growing gold line beneath */
-.loader-line {
-    width: 0px;
-    height: 2px;
-    background-color: var(--accent-gold);
-    margin: 15px 0;
-    animation: lineExpand 1.8s infinite ease-in-out;
+.wcf-logo-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
 }
 
-/* Subtitle branding */
-.loader-brand-text {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: var(--text-muted);
-    opacity: 0.8;
-    margin-top: 5px;
+/* Letters subtle entrance */
+.wcf-letter {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: letterFadeIn 0.6s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+}
+.w-letter { animation-delay: 0.1s; }
+.c-letter { animation-delay: 0.2s; }
+.f-letter { animation-delay: 0.3s; }
+
+@keyframes letterFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Keyframes for Glowing Pulse */
-@keyframes pulseGlow {
+/* ==========================================
+   1. APERTURE ROTATION ANIMATION (PROPERLY CENTERED AT 458, 184)
+=========================================== */
+.aperture-spinner {
+    transform-origin: 458px 184px; /* Matches new center of the aperture */
+    animation: spinAperture 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes spinAperture {
     0% {
-        transform: scale(0.95);
-        opacity: 0.5;
+        transform: rotate(0deg) scale(0.97);
     }
     50% {
-        transform: scale(1.05);
-        opacity: 1;
-        text-shadow: 0 10px 30px rgba(180, 150, 110, 0.3);
+        transform: rotate(180deg) scale(1.03);
     }
     100% {
-        transform: scale(0.95);
-        opacity: 0.5;
+        transform: rotate(360deg) scale(0.97);
     }
 }
 
-/* Keyframes for Line Expansion */
-@keyframes lineExpand {
-    0% { width: 20px; opacity: 0.2; }
-    50% { width: 90px; opacity: 1; }
-    100% { width: 20px; opacity: 0.2; }
+/* Smoothly locks into final place when swoosh starts */
+.wcf-preloader.draw-swoosh .aperture-spinner {
+    animation: lockAperture 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* Loaded class to hide preloader smoothly */
-.preloader-hidden {
+@keyframes lockAperture {
+    to {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* ==========================================
+   2. GOLDEN SWOOSH LIQUID REVEAL ANIMATION (C TO F)
+=========================================== */
+.swoosh-clip-rect {
+    width: 0px;
+}
+
+/* When loading reaches 100%, smoothly wipe-reveal the exact tapered swoosh from C into F */
+.wcf-preloader.draw-swoosh .swoosh-clip-rect {
+    animation: smoothSwooshReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes smoothSwooshReveal {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 380px; /* Full width from C bottom to F right tip */
+    }
+}
+
+/* ==========================================
+   3. PROGRESS BAR & TYPOGRAPHY
+=========================================== */
+.loader-meta {
+    width: 100%;
+    max-width: 280px;
+}
+
+.loader-progress-track {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loader-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #8c6a3d, #c5a06d);
+    transition: width 0.15s ease-out;
+}
+
+.loader-status-text {
+    font-family: var(--font-body, 'Montserrat', sans-serif);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #777;
+    font-weight: 500;
+}
+
+.loader-percentage {
+    font-family: var(--font-heading, 'Cormorant Garamond', serif);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #967344;
+}
+
+/* ==========================================
+   4. SHUTTER SPLIT EXIT ANIMATION
+=========================================== */
+.wcf-preloader.loader-exit {
+    pointer-events: none;
+}
+
+.wcf-preloader.loader-exit .loader-stage {
     opacity: 0;
-    visibility: hidden;
+    transform: scale(1.05);
+}
+
+.wcf-preloader.loader-exit .shutter-top {
+    transform: translateY(-100%);
+}
+
+.wcf-preloader.loader-exit .shutter-bottom {
+    transform: translateY(100%);
+}
+
+/* ==========================================
+   5. RESPONSIVE DESIGN FOR ALL DEVICES
+=========================================== */
+@media (max-width: 768px) {
+    .wcf-svg-wrapper {
+        max-width: 310px;
+    }
+    .loader-meta {
+        max-width: 220px;
+    }
+    .loader-status-text {
+        font-size: 0.62rem;
+        letter-spacing: 1.8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wcf-svg-wrapper {
+        max-width: 260px;
+    }
+    .loader-meta {
+        max-width: 190px;
+    }
 }
