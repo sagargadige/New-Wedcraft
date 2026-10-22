@@ -141,3 +141,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 950);
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const heroVideo = document.getElementById("hero-video");
+    
+    if (heroVideo) {
+        // Prevent black screen blink on video loop
+        heroVideo.addEventListener("timeupdate", () => {
+            if (heroVideo.duration && heroVideo.currentTime >= heroVideo.duration - 0.3) {
+                heroVideo.currentTime = 0;
+            }
+        });
+    }
+});

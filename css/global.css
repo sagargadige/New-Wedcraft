@@ -311,3 +311,112 @@ p {
         max-width: 190px;
     }
 }
+
+/* ==========================================
+   WEDCRAFT — STICKY HERO SECTION FIX
+   Fixes section layering and background bleed
+   ========================================== */
+
+/* Keep the hero as the bottom visual layer */
+.hero-section {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    isolation: isolate;
+}
+
+/* Keep video and overlay inside the hero */
+.hero-video-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-white-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-minimal-content,
+.hero-scroll-indicator {
+    z-index: 2;
+}
+
+/* Every section after the hero must cover the hero */
+.services-section,
+.portfolio-section,
+.reviews-section,
+.contact-section,
+.site-footer {
+    position: relative;
+    z-index: 2;
+    isolation: isolate;
+    background-color: var(--bg-light, #F9F8F6);
+}
+
+/* Prevent transparent cards from exposing the video */
+.services-section,
+.portfolio-section,
+.reviews-section,
+.contact-section {
+    background-clip: padding-box;
+}
+
+/* Keep service cards readable */
+.service-card,
+.portfolio-card,
+.review-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile viewport safety */
+@media (max-width: 991px) {
+    .hero-section {
+        min-height: 580px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ==========================================
+   FIX: WHY CHOOSE US SECTION BACKGROUND
+   ========================================== */
+
+.why-choose-section {
+    position: relative;
+    z-index: 2;
+    isolation: isolate;
+
+    /* Fully cover the fixed/sticky hero video */
+    background-color: var(--bg-light, #F9F8F6);
+    background-image: none;
+    background-clip: padding-box;
+}
+
+/* Keep section content above its own background */
+.why-choose-section > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure cards have solid backgrounds */
+.why-choose-section .feature-card,
+.why-choose-section .why-card,
+.why-choose-section .service-card {
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+/* Mobile safety */
+@media (max-width: 767px) {
+    .why-choose-section {
+        background-color: #F9F8F6;
+    }
+}

@@ -1,3 +1,50 @@
+/* -- Premium Navbar Styling -- */
+.site-header {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.wedcraft-logo {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-dark) !important;
+    letter-spacing: -1px;
+}
+
+.navbar-nav .nav-link {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-gold);
+}
+
+.btn-partner {
+    display: inline-block;
+    border: 1px solid var(--text-dark);
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 24px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.btn-partner:hover {
+    background-color: var(--text-dark);
+    color: #fff !important;
+}
+
 /* -- Navbar Logo Styling -- */
 .site-logo-img {
   height: 25px !important; /* Aap apne hisab se height 40px ya 50px kar sakte hain */

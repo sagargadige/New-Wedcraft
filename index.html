@@ -254,76 +254,46 @@
 
     <main>
       <section id="hero" class="hero-section">
-        <div class="container h-100">
-          <div class="row h-100 align-items-center">
-            <div class="col-lg-6 hero-content position-relative z-index-2">
-              <div class="badge-premium mb-3">
-                India's Elite White-Label Partners
-              </div>
-              <h1 class="hero-title">
-                We don't just edit videos.<br />
-                <span class="italic-gold">
-                  We bring memories back to life.
-                </span>
-              </h1>
-              <p class="hero-description mt-4">
-                Editing is more than cutting clips to a beat. We preserve the
-                raw emotion of every frame, delivering cinematic masterpieces
-                that allow your clients to relive their most intimate moments.
-              </p>
-              <div class="mt-4 d-flex align-items-center gap-4">
-                <a href="#services" class="btn-solid-gold">
-                  Explore Services
-                </a>
-                <a href="#portfolio" class="link-explore">
-                  View Portfolio <span class="arrow">→</span>
-                </a>
-              </div>
-            </div>
+        <!-- Full-Screen 100vh Cinematic Video Background -->
+        <div class="hero-video-wrapper">
+          <video
+            id="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="assets/images/video-poster.jpg"
+            class="hero-bg-video"
+          >
+            <source src="assets/videos/bg-Clip2.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
+          </video>
+          <!-- Soft White Mist & Luminous Vignette Overlay -->
+          <div class="hero-white-overlay"></div>
+        </div>
 
-            <div class="col-lg-6 hero-image-wrapper">
-              <!-- Poora image container clickable banaya gaya hai -->
-              <a
-                href="https://www.instagram.com/itseditorvivek/"
-                target="_blank"
-                class="founder-social-link"
-                title="Visit Vivek Mishra's Instagram"
-              >
-                <div class="cinematic-frame-composition">
-                  <!-- Decorative Modern Backdrop Accent -->
-                  <div class="backdrop-glow"></div>
-
-                  <!-- Main Unique Image Frame -->
-                  <div class="luxury-image-container">
-                    <img
-                      src="assets/images/founder.jpg"
-                      alt="Vivek Mishra - WedCraft Founder"
-                      class="img-fluid main-img"
-                    />
-
-                    <!-- Floating Glass Badge over the image -->
-                    <div class="floating-studio-badge">
-                      <span class="badge-dot"></span>
-                      <span>Elite Post-Production Studio</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Founder name aur title ko bhi clickable banaya gaya hai -->
-              <div class="founder-info mt-4">
-                <a
-                  href="https://www.instagram.com/itseditorvivek/"
-                  target="_blank"
-                  class="founder-name-link"
-                >
-                  <h5 class="founder-name">Vivek Mishra</h5>
-                </a>
-                <p class="founder-title">Creative Director & Founder</p>
-              </div>
+        <!-- Ultra-Minimalist Centered Brand Title -->
+        <div class="container h-100 position-relative z-index-3">
+          <div
+            class="row h-100 justify-content-center align-items-center text-center"
+          >
+            <div class="col-12 hero-minimal-content">
+              <h1 class="hero-brand-display">WEDCRAFT</h1>
+              <p class="hero-brand-subtitle">Wedding Films</p>
             </div>
           </div>
         </div>
+
+        <!-- Bottom "Scroll to Explore" Indicator -->
+        <a
+          href="#services"
+          class="hero-scroll-indicator"
+          aria-label="Scroll to explore"
+        >
+          <span class="scroll-line"></span>
+          <span class="scroll-text">Scroll to explore</span>
+        </a>
       </section>
 
       <section id="services" class="services-section">
@@ -686,7 +656,7 @@
               </div>
             </div>
 
-            <!-- 9. NEW: Color Grading & Sound Design (Completes the 3x3 Luxury Grid) -->
+            <!-- 9. AI-Generated & VFX Cinematics (Replaces previous 9th card) -->
             <div class="col-lg-4 col-md-6 mx-md-auto">
               <div class="service-card">
                 <div class="service-header-top">
@@ -699,12 +669,13 @@
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     >
-                      <line x1="14" y1="12" x2="14" y2="52" />
-                      <line x1="32" y1="12" x2="32" y2="52" />
-                      <line x1="50" y1="12" x2="50" y2="52" />
-                      <circle cx="14" cy="24" r="5" fill="#ffffff" />
-                      <circle cx="32" cy="40" r="5" fill="#ffffff" />
-                      <circle cx="50" cy="20" r="5" fill="#ffffff" />
+                      <path
+                        d="M32 6L38 22L54 28L38 34L32 50L26 34L10 28L26 22L32 6Z"
+                      />
+                      <path
+                        d="M50 42L53 48L59 51L53 54L50 60L47 54L41 51L47 48L50 42Z"
+                      />
+                      <circle cx="16" cy="16" r="3" fill="currentColor" />
                     </svg>
                   </div>
                   <svg
@@ -714,18 +685,16 @@
                     stroke="currentColor"
                     stroke-width="2"
                   >
-                    <line x1="14" y1="12" x2="14" y2="52" />
-                    <line x1="32" y1="12" x2="32" y2="52" />
-                    <line x1="50" y1="12" x2="50" y2="52" />
-                    <circle cx="14" cy="24" r="5" />
-                    <circle cx="32" cy="40" r="5" />
-                    <circle cx="50" cy="20" r="5" />
+                    <path
+                      d="M32 6L38 22L54 28L38 34L32 50L26 34L10 28L26 22L32 6Z"
+                    />
                   </svg>
                 </div>
-                <h3 class="service-title">Color & Sound Mastering</h3>
+                <h3 class="service-title">AI Generated Cinematics</h3>
                 <p class="service-desc">
-                  Bespoke film-look color grading for LOG/RAW footage paired
-                  with immersive foley, audio cleanup, and mastering.
+                  Cutting-edge AI-generated visual effects, cinematic B-roll
+                  extensions, and futuristic transitions that make your wedding
+                  films truly magical.
                 </p>
               </div>
             </div>
@@ -901,7 +870,7 @@
           <div class="row mb-5">
             <div class="col-lg-8 mx-auto text-center">
               <span class="badge-premium mb-2"> The WedCraft Advantage </span>
-              <h2 class="section-title">Why Top Studios Partner With Us</h2>
+              <h2 class="section-title">Why Studios Partner With Us</h2>
               <p class="section-subtitle mt-2">
                 Leave your post-production hassles to our experts. Here is why
                 elite wedding filmmakers trust us as their dedicated white-label
@@ -1184,7 +1153,7 @@
               <h2 class="section-title">Words of Appreciation</h2>
 
               <p class="section-subtitle mt-3">
-                Don't just take our word for it. Here is what top studios and
+                Don't just take our word for it. Here is what studios and
                 filmmakers have to say about our white-label post-production
                 magic.
               </p>
