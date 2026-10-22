@@ -1,45 +1,51 @@
+/* ==========================================
+   WEDCRAFT FILMS - 3x3 GRID LUXURY SERVICES CSS
+=========================================== */
+
 /* -- Services Section Container -- */
 .services-section {
-    padding: 100px 0;
-    background-color: var(--bg-light);
+    padding: 85px 0;
+    background-color: var(--bg-light); /* #F9F8F6 Alabaster */
     position: relative;
 }
 
 /* -- Section Headers -- */
 .section-title {
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 500;
-    color: var(--text-dark);
+    color: var(--text-dark); /* #121212 Deep Charcoal */
     letter-spacing: -1px;
 }
 
 .section-subtitle {
     font-family: var(--font-body);
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    max-width: 600px;
+    font-size: 1.05rem;
+    color: var(--text-muted); /* #5A5A5A */
+    max-width: 580px;
     margin: 0 auto;
 }
 
-/* -- Luxury Service Cards -- */
+/* -- Sleek 3-Column Luxury Service Cards -- */
 .service-card {
-    background-color: #ffffff; /* Pure white background to pop out from alabaster */
-    padding: 50px 45px;
-    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 32px 30px; /* Balanced padding for 3-column layout */
+    border-radius: 14px;
     position: relative;
     overflow: hidden;
     height: 100%;
     z-index: 1;
-    border: 1px solid rgba(0,0,0,0.03);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-    transition: all 0.4s ease; /* Smooth animation time */
+    border: 1px solid rgba(18, 18, 18, 0.04);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.02);
+    transition: all 0.35s cubic-bezier(0.2, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
 }
 
 /* 3D Hover Lift Effect */
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.08);
-    border-color: rgba(154, 123, 79, 0.2); /* Soft gold border on hover */
+    transform: translateY(-8px);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.06), 0 8px 20px rgba(154, 123, 79, 0.08);
+    border-color: rgba(154, 123, 79, 0.25);
 }
 
 /* Decorative Gold Bottom Line on Hover */
@@ -49,59 +55,318 @@
     bottom: 0;
     left: 0;
     width: 0;
-    height: 4px;
-    background-color: var(--accent-gold);
-    transition: width 0.4s ease;
+    height: 3.5px;
+    background-color: var(--accent-gold); /* #9A7B4F */
+    transition: width 0.35s ease;
 }
 
 .service-card:hover::after {
-    width: 100%; /* Line expands on hover */
+    width: 100%;
 }
 
-/* -- Editorial Background Numbers -- */
-.service-bg-number {
+/* -- Service Icon & Organic Blob Styling -- */
+.service-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Organic Gold Blob Badge */
+.service-icon-blob {
+    width: 58px;
+    height: 58px;
+    background-color: rgba(154, 123, 79, 0.1);
+    border: 1px solid rgba(154, 123, 79, 0.22);
+    border-radius: 42% 58% 65% 35% / 45% 42% 58% 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold); /* #9A7B4F */
+    transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.service-icon-blob svg {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.35s ease;
+}
+
+/* Hover Effect on Icon Blob */
+.service-card:hover .service-icon-blob {
+    background-color: var(--accent-gold); /* #9A7B4F */
+    color: #ffffff;
+    border-radius: 55% 45% 38% 62% / 52% 58% 42% 48%;
+    box-shadow: 0 10px 20px rgba(154, 123, 79, 0.25);
+    transform: scale(1.05);
+}
+
+.service-card:hover .service-icon-blob svg {
+    transform: scale(1.08);
+}
+
+/* Fix for 9th Card Slider Circles on Hover */
+.service-card:hover .service-icon-blob svg circle {
+    fill: var(--accent-gold);
+}
+
+/* -- Subtle Watermark Logo in Top-Right Corner -- */
+.service-bg-watermark {
     position: absolute;
-    top: 10px;
-    right: 20px;
-    font-family: var(--font-heading);
-    font-size: 8rem;
-    line-height: 1;
-    font-weight: 600;
+    top: 14px;
+    right: 18px;
+    width: 90px;
+    height: 90px;
     color: var(--text-dark);
-    opacity: 0.03; /* Extremely faint, watermark style */
+    opacity: 0.025;
     z-index: -1;
     transition: all 0.4s ease;
-    user-select: none;
+    pointer-events: none;
 }
 
-.service-card:hover .service-bg-number {
-    opacity: 0.08; /* Slightly visible on hover */
+.service-card:hover .service-bg-watermark {
+    opacity: 0.08;
     color: var(--accent-gold);
-    transform: scale(1.05);
+    transform: scale(1.08) rotate(-4deg);
 }
 
 /* -- Card Typography -- */
 .service-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 20px;
-    color: var(--text-dark);
+    margin-bottom: 12px;
+    color: var(--text-dark); /* #121212 */
     position: relative;
+    line-height: 1.25;
 }
 
 /* Little gold dash above the title */
 .service-title::before {
     content: '';
     display: block;
-    width: 30px;
+    width: 26px;
     height: 2px;
-    background-color: var(--accent-gold);
-    margin-bottom: 15px;
+    background-color: var(--accent-gold); /* #9A7B4F */
+    margin-bottom: 12px;
+    transition: width 0.3s ease;
+}
+
+.service-card:hover .service-title::before {
+    width: 44px;
 }
 
 .service-desc {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: var(--text-muted);
+    font-size: 0.96rem;
+    line-height: 1.65;
+    color: var(--text-muted); /* #5A5A5A */
     margin: 0;
+}
+
+/* -- Responsive Adjustments -- */
+@media (max-width: 991px) {
+    .services-section {
+        padding: 65px 0;
+    }
+    .section-title {
+        font-size: 2.4rem;
+    }
+    .service-card {
+        padding: 26px 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-card {
+        padding: 24px 20px;
+    }
+    .service-title {
+        font-size: 1.35rem;
+    }
+    .service-desc {
+        font-size: 0.92rem;
+    }
+}
+
+
+/* why you choose us start */
+
+/* ==========================================
+   WEDCRAFT FILMS - WHY CHOOSE US SECTION CSS
+=========================================== */
+
+.why-choose-section {
+    padding-top: 85px;
+    background-color: var(--bg-light); /* #F9F8F6 Alabaster */
+    position: relative;
+}
+
+/* -- Horizontal Side-by-Side Luxury Card (Matches Reference Image Layout) -- */
+.choose-card {
+    background-color: #ffffff;
+    padding: 32px 30px;
+    border-radius: 14px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    z-index: 1;
+    border: 1px solid rgba(18, 18, 18, 0.04);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.02);
+    transition: all 0.35s cubic-bezier(0.2, 1, 0.3, 1);
+    display: flex;
+    align-items: flex-start;
+    gap: 24px; /* Space between left icon blob and right text */
+}
+
+/* 3D Hover Lift Effect */
+.choose-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.06), 0 8px 20px rgba(154, 123, 79, 0.08);
+    border-color: rgba(154, 123, 79, 0.25);
+}
+
+/* Decorative Gold Bottom Line on Hover */
+.choose-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3.5px;
+    background-color: var(--accent-gold); /* #9A7B4F */
+    transition: width 0.35s ease;
+}
+
+.choose-card:hover::after {
+    width: 100%;
+}
+
+/* -- Left Side Organic Gold Blob Icon -- */
+.choose-icon-blob {
+    width: 66px;
+    height: 66px;
+    background-color: rgba(154, 123, 79, 0.1);
+    border: 1px solid rgba(154, 123, 79, 0.22);
+    border-radius: 42% 58% 65% 35% / 45% 42% 58% 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold); /* #9A7B4F */
+    transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.choose-icon-blob svg {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.35s ease;
+}
+
+/* Hover Effect on Icon Blob: Turns Solid Gold with White Icon */
+.choose-card:hover .choose-icon-blob {
+    background-color: var(--accent-gold); /* #9A7B4F */
+    color: #ffffff;
+    border-radius: 55% 45% 38% 62% / 52% 58% 42% 48%;
+    box-shadow: 0 10px 20px rgba(154, 123, 79, 0.25);
+    transform: scale(1.05);
+}
+
+.choose-card:hover .choose-icon-blob svg {
+    transform: scale(1.08);
+}
+
+/* -- Right Side Content Styling -- */
+.choose-content {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.choose-title {
+    font-size: 1.45rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-dark); /* #121212 */
+    line-height: 1.25;
+    position: relative;
+}
+
+/* Subtle Gold Accent Line above Title */
+.choose-title::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--accent-gold); /* #9A7B4F */
+    margin-bottom: 10px;
+    transition: width 0.3s ease;
+}
+
+.choose-card:hover .choose-title::before {
+    width: 42px;
+}
+
+.choose-desc {
+    font-size: 0.96rem;
+    line-height: 1.65;
+    color: var(--text-muted); /* #5A5A5A */
+    margin: 0;
+}
+
+/* -- Faint Background Watermark in Bottom-Right Corner -- */
+.choose-bg-watermark {
+    position: absolute;
+    bottom: -10px;
+    right: 12px;
+    width: 95px;
+    height: 95px;
+    color: var(--text-dark);
+    opacity: 0.025;
+    z-index: 1;
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.choose-card:hover .choose-bg-watermark {
+    opacity: 0.07;
+    color: var(--accent-gold);
+    transform: scale(1.08) rotate(-5deg);
+}
+
+/* -- Responsive Adjustments -- */
+@media (max-width: 991px) {
+    .why-choose-section {
+        padding: 65px 0;
+    }
+    .choose-card {
+        padding: 26px 24px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .choose-card {
+        flex-direction: column; /* Stacks cleanly on very small mobile screens */
+        padding: 24px 20px;
+        gap: 16px;
+    }
+    .choose-icon-blob {
+        width: 56px;
+        height: 56px;
+    }
+    .choose-icon-blob svg {
+        width: 26px;
+        height: 26px;
+    }
+    .choose-title {
+        font-size: 1.3rem;
+    }
+    .choose-desc {
+        font-size: 0.92rem;
+    }
 }
