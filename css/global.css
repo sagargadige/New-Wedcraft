@@ -420,3 +420,21 @@ p {
         background-color: #F9F8F6;
     }
 }
+/* ==========================================
+   WEDCRAFT FILMS - PREMIUM BADGE STYLING
+=========================================== */
+
+.badge-premium {
+    display: inline-block;
+    font-family: var(--font-body, 'Montserrat', sans-serif);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #9A7B4F !important; /* Rich matte luxury gold */
+    font-weight: 500;
+    padding: 6px 16px;
+    background-color: rgba(154, 123, 79, 0.08); /* Soft champagne gold tint */
+    border: 1px solid rgba(154, 123, 79, 0.2);
+    border-radius: 30px;
+    margin-bottom: 12px;
+}
